@@ -1,4 +1,4 @@
-class Shop {
+/*class Shop {
   constructor(breads, lagmans, colas) {
     this.breads = breads;
     this.lagmans = lagmans;
@@ -49,4 +49,4 @@ const shop = new Shop(4, 5, 2);
 shop.remaining();
 shop.sell("bread", 3);
 shop.accept("cola", 4);
-shop.leftover();
+shop.leftover();*/
