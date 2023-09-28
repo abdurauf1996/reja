@@ -14,6 +14,7 @@
   background: #f0f0f6;
   overflow: scroll;
 }
+
 .main_frame .left_frame {
   width: 305px;
   height: 100%;
@@ -326,4 +327,121 @@
       margin-top: 16px;
     }
   }
+}
+
+.services {
+  width: 100%;
+  margin-top: 148px;
+  .head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .s_title {
+      color: var(--Black, #2b2b2b);
+
+      /* H2 - 32px */
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 123.6%; /* 39.552px */
+      text-transform: capitalize;
+      width: 193px;
+    }
+    .s_txt {
+      color: var(--Paragraph-Font, #767676);
+      text-align: center;
+      font-kerning: none;
+      font-feature-settings: "calt" off;
+
+      /* P-15px paragraph */
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 160% */
+      text-transform: capitalize;
+      width: 438px;
+      margin-top: 25px;
+    }
+  }
+  .items {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 310px;
+      height: 225px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+      .i_icon {
+        width: 68px;
+        height: 68px;
+      }
+      .i_title {
+        margin-top: 26px;
+        color: var(--Black, #2b2b2b);
+
+        /* H4 - 18px */
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 123.6%; /* 22.248px */
+        text-transform: capitalize;
+      }
+      .i_txt {
+        width: 260px;
+        margin-top: 15px;
+        color: var(--Paragraph-Font, #767676);
+        text-align: center;
+        font-kerning: none;
+        font-feature-settings: "calt" off;
+
+        /* Paragraph Progress - 15 */
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 160% */
+        text-transform: capitalize;
+      }
+      .order {
+        color: var(--Yellow, #ffb400);
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.right_frame {
+  display: flex;
+  flex-direction: column;
+}
+.right_frame_top {
+  margin: 20px;
+  padding: 20px;
+}
+.right_frame_bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-top: 80px;
+}
+.right_icon {
+  padding-bottom: 43px;
+  width: 45px;
+  height: 45px;
 }
