@@ -437,11 +437,12 @@
 .right_frame_bottom {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 43px;
   padding-top: 80px;
 }
 .right_icon {
-  padding-bottom: 43px;
+  padding-bottom: 50px;
   width: 45px;
   height: 45px;
+  margin-top: 50px;
 }
