@@ -4,9 +4,9 @@ const mongodb = require("mongodb");
 
 let db;
 connectionString =
-  "mongodb+srv://Bn:@atlascluster.osz5yqh.mongodb.net/Reja?authSourve=ad";
+  "mongodb+srv://vakhobovabdurauf:xw8uK63Wau1znpmG@ben.kgwux9o.mongodb.net/Reja?retryWrites=true&w=majority";
 
-const connectionString = mongodb.connect(
+mongodb.connect(
   connectionString,
   {
     useNewUrlParser: true,
