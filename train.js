@@ -92,3 +92,9 @@ maslahatBering(20)
     console.log("ERROR", data);
   });
 console.log("passed here 1");*/
+
+function result(str) {
+  return str.split("").reverse().join("");
+}
+const result_1 = result("hello");
+console.log(result_1);
