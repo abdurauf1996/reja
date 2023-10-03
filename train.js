@@ -93,8 +93,18 @@ maslahatBering(20)
   });
 console.log("passed here 1");*/
 
-function result(str) {
+/*function result(str) {
   return str.split("").reverse().join("");
 }
 const result_1 = result("hello");
-console.log(result_1);
+console.log(result_1);*/
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(findDoublers("hello"));
+console.log(findDoublers("salom"));
