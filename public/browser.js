@@ -1,13 +1,14 @@
 console.log("Frontent JS ishga tushdi");
 function itemTemplate(item) {
   return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between ">
-    <span class="item-text">${item.reja}</span>
+    <span class="item-text"> ${item.reja} </span>
     <div>
-      <button data-id="${item._id} "
+      <button data-id="${item._id}"
        class="edit-me btn-secondary btn-sm mr-1">
         ozgartrish
       </button>
-<button data-id="${item._id} " class="delete-me btn btn-danger btn-sm">
+<button data-id="${item._id}" 
+class="delete-me btn btn-danger btn-sm">
   O'chirish
 </button>
 </div>
