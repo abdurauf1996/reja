@@ -1,11 +1,15 @@
+//const { response } = "../app";
+
+//const { default: axios } = require("axios");
+
 console.log("Frontent JS ishga tushdi");
 function itemTemplate(item) {
   return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between ">
     <span class="item-text"> ${item.reja} </span>
     <div>
       <button data-id="${item._id}"
-       class="edit-me btn-secondary btn-sm mr-1">
-        ozgartrish
+       class="edit=me btn-secondary btn-sm mr-1">
+        Ozgartrish
       </button>
 <button data-id="${item._id}" 
 class="delete-me btn btn-danger btn-sm">
@@ -17,8 +21,10 @@ class="delete-me btn btn-danger btn-sm">
 }
 
 let createField = document.getElementById("create-field");
+
 document.getElementById("create-form").addEventListener("sumbit", function (e) {
   e.preventDefault();
+
   axios
     .post("/create-item", { reja: createField.value })
     .then((response) => {
@@ -31,4 +37,51 @@ document.getElementById("create-form").addEventListener("sumbit", function (e) {
     .catch((err) => {
       console.log("Iltimos qaytadan harakat qiling");
     });
+});
+
+document.addEventListener("click", function (e) {
+  // delet oper
+  console.log(e.target);
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq ochirmoqchimisiz?")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((respose) => {
+          console.log(respose.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harakat qiling");
+        });
+    }
+  }
+  //edit oper
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "Ozgartirish kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harakat qiling");
+        });
+    }
+  }
+});
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((respose) => {
+    alert(respose.data.state);
+    document.location.reload();
+  });
 });
