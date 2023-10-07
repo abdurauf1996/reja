@@ -108,3 +108,9 @@ function findDoublers(str) {
 }
 console.log(findDoublers("hello"));
 console.log(findDoublers("salom"));
+
+function teskari(str1) {
+  return str1.split("").reverse().join("");
+}
+const result = teskari("HELLO");
+console.log(result);
