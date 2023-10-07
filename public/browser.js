@@ -22,7 +22,7 @@ class="delete-me btn btn-danger btn-sm">
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("sumbit", function (e) {
+document.getElementById("create-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   axios
@@ -80,8 +80,8 @@ document.addEventListener("click", function (e) {
   }
 });
 document.getElementById("clean-all").addEventListener("click", function () {
-  axios.post("/delete-all", { delete_all: true }).then((respose) => {
-    alert(respose.data.state);
+  axios.post("/delete-all", { delete_all: true }).then((response) => {
+    alert(response.data.state);
     document.location.reload();
   });
 });
